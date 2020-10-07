@@ -118,6 +118,7 @@ var App = function (_React$Component3) {
       return React.createElement(
         "div",
         { className: "container" },
+        React.createElement(ProgressBar, { now: 60 }),
         React.createElement(Header, null),
         React.createElement(Step, { letter: "S", description: "Stop" }),
         React.createElement(Step, { letter: "I", description: "Increase volume" }),
@@ -134,3 +135,8 @@ var App = function (_React$Component3) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
+
+//const blocks = document.getElementsByClassName("block");
+//for (var i = 0; i < blocks.length; i++) {
+//  blocks.item(i).classList.add("filled");
+//}

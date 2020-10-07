@@ -47,6 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <ProgressBar now={60} />
         <Header />
         <Step letter="S" description="Stop" />
         <Step letter="I" description="Increase volume" />
@@ -61,3 +62,8 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+//const blocks = document.getElementsByClassName("block");
+//for (var i = 0; i < blocks.length; i++) {
+//  blocks.item(i).classList.add("filled");
+//}
