@@ -29,7 +29,7 @@ var Header = function (_React$Component) {
           React.createElement(
             "h1",
             null,
-            this.props.title
+            "SITBACK"
           )
         )
       );
@@ -82,12 +82,18 @@ var Step = function (_React$Component2) {
           React.createElement(
             "div",
             { className: "row" },
-            React.createElement("div", { className: "col-sm-2 block" }),
-            React.createElement("div", { className: "col-sm-2 block" }),
-            React.createElement("div", { className: "col-sm-2 block" }),
-            React.createElement("div", { className: "col-sm-2 block" }),
-            React.createElement("div", { className: "col-sm-2 block" }),
-            React.createElement("div", { className: "col-sm-2 block" })
+            React.createElement("div", { className: "col-sm-1 block block-left" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block" }),
+            React.createElement("div", { className: "col-sm-1 block block-right" })
           )
         )
       );
@@ -112,7 +118,7 @@ var App = function (_React$Component3) {
       return React.createElement(
         "div",
         { className: "container" },
-        React.createElement(Header, { title: "SITBACK" }),
+        React.createElement(Header, null),
         React.createElement(Step, { letter: "S", description: "Stop" }),
         React.createElement(Step, { letter: "I", description: "Increase volume" }),
         React.createElement(Step, { letter: "T", description: "Touch" }),

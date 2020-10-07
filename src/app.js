@@ -3,7 +3,7 @@ class Header extends React.Component {
     return (
       <div className="row">
         <div id="title" className="col-sm-12">
-          <h1>{this.props.title}</h1>
+          <h1>SITBACK</h1>
         </div>
       </div>
     );
@@ -24,12 +24,18 @@ class Step extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-2 block"></div>
-            <div className="col-sm-2 block"></div>
-            <div className="col-sm-2 block"></div>
-            <div className="col-sm-2 block"></div>
-            <div className="col-sm-2 block"></div>
-            <div className="col-sm-2 block"></div>
+            <div className="col-sm-1 block block-left"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block"></div>
+            <div className="col-sm-1 block block-right"></div>
           </div>
         </div>
       </div>
@@ -41,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Header title="SITBACK" />
+        <Header />
         <Step letter="S" description="Stop" />
         <Step letter="I" description="Increase volume" />
         <Step letter="T" description="Touch" />
