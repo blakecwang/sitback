@@ -1,0 +1,13 @@
+#title {
+  text-align: center;
+}
+
+.block {
+  background-color: red;
+  height: 40px;
+  padding: 5px;
+}
+
+.step {
+  margin-top: 40px;
+}
