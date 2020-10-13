@@ -2,7 +2,7 @@ const path = require('path')
 const public_dir = path.join(__dirname, 'public')
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     path: public_dir,
     filename: 'bundle.js',

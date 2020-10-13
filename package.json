@@ -5,9 +5,10 @@
   "author": "Blake Wang",
   "license": "MIT",
   "dependencies": {
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "react-modal": "2.2.2"
+    "bootstrap": "^4.5.3",
+    "react": "16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
