@@ -3,8 +3,6 @@ import Step from './Step'
 
 import 'regenerator-runtime/runtime'
 
-import '../styles/styles.scss'
-
 class App extends React.Component {
   state = {
     step: 0,
@@ -46,6 +44,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='container'>
+        <h1>SITBACK</h1>
         <Step
           label='Stop - 5min'
           now={this.calcNow(0)}

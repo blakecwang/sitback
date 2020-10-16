@@ -1,10 +1,10 @@
 const path = require('path')
-const public_dir = path.join(__dirname, 'public')
+const docs_dir = path.join(__dirname, 'docs')
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: public_dir,
+    path: docs_dir,
     filename: 'bundle.js',
   },
   module: {
@@ -21,14 +21,13 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        exclude: /node_modules/,
+        test: /\.s?css$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: public_dir
+    contentBase: docs_dir
   }
 }
