@@ -7,7 +7,7 @@ class App extends React.Component {
   state = {
     step: 0,
     now: 0,
-    progressBarHeight: '0'
+    progressBarHeight: '2rem'
   }
 
   calcNow = (step) => {
@@ -48,7 +48,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='container-fluid'>
-        <h1>SITBACK</h1>
+        <h1>sitback</h1>
         <Step
           label='Stop - 5min'
           now={this.calcNow(0)}
