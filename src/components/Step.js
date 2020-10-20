@@ -14,17 +14,17 @@ class Step extends React.Component {
     return (
       <div>
         <div className='row'>
-          <div className='col-md-12'>
+          <div className='col-sm-12'>
             <label className='progress-label'>
               {`${this.props.label} (${this.props.now}%)`}
             </label>
           </div>
         </div>
         <div className='row'>
-          <div className='col-md-12'>
+          <div className='col-sm-12'>
             <ProgressBar
               style={{
-                height: this.state.mounted ? `${(window.innerHeight + 65) / 7 - 55}px` : '1rem',
+                height: this.state.mounted ? `${((window.innerHeight - 85) / 7 - 53) / 10}rem` : '2rem',
                 fontSize: '2rem',
                 fontWeight: 'bold'
               }}

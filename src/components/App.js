@@ -24,8 +24,8 @@ class App extends React.Component {
   }
 
   updateStepAndNow = async () => {
-    const period5 = 0.5 * 60 * 1000 / 100
-    const period2 = 0.2 * 60 * 1000 / 100
+    const period5 = 5 * 60 * 1000 / 100
+    const period2 = 2 * 60 * 1000 / 100
 
     for (let i = 0; i < 699; i++) {
       const period = i < 99 ? period5 : period2
@@ -43,7 +43,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className='container'>
+      <div className='container-fluid'>
         <h1>SITBACK</h1>
         <Step
           label='Stop - 5min'
