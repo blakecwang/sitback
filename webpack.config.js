@@ -1,10 +1,9 @@
-const path = require('path')
-const docs_dir = path.join(__dirname, 'docs')
+const root_dir = __dirname
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: docs_dir,
+    path: root_dir,
     filename: 'bundle.js',
   },
   module: {
@@ -28,6 +27,6 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: docs_dir
+    contentBase: root_dir
   }
 }
