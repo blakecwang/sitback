@@ -48,30 +48,37 @@ class App extends React.Component {
         <Step
           label='Stop - 5min'
           now={this.calcNow(0)}
+          stepNum={0}
         />
         <Step
           label='Increase volume - 2min'
           now={this.calcNow(1)}
+          stepNum={1}
         />
         <Step
           label='Touch - 2min'
           now={this.calcNow(2)}
+          stepNum={2}
         />
         <Step
           label='Binky - 2min'
           now={this.calcNow(3)}
+          stepNum={3}
         />
         <Step
           label='Add rocking - 2min'
           now={this.calcNow(4)}
+          stepNum={4}
         />
         <Step
           label='Cuddle - 2min'
           now={this.calcNow(5)}
+          stepNum={5}
         />
         <Step
           label='K, time to feed!'
           now={this.calcNow(6)}
+          stepNum={6}
         />
       </div>
     )

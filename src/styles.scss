@@ -1,0 +1,39 @@
+//$blue: #00a2ff;
+$blue: #72DAFB;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.8rem;
+  margin: 0;
+  margin-top: 1.2rem;
+}
+
+.progress {
+  height: 100%;
+}
+
+.progress, .progress-bar {
+  border-radius: 500px;
+}
+
+.progress-label {
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin-top: 1.2rem;
+}
+
+.bg-num-0 { background: $blue; }
+.bg-num-1 { background: darken($blue, 5%); }
+.bg-num-2 { background: darken($blue, 10%); }
+.bg-num-3 { background: darken($blue, 15%); }
+.bg-num-4 { background: darken($blue, 20%); }
+.bg-num-5 { background: darken($blue, 25%); }
+.bg-num-6 { background: darken($blue, 30%); }

@@ -28,7 +28,8 @@ class Step extends React.Component {
                 fontSize: '2rem',
                 fontWeight: 'bold'
               }}
-              now={this.props.now}
+              now={100}
+              variant={`num-${this.props.stepNum}`}
             />
           </div>
         </div>
