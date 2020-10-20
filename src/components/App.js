@@ -6,7 +6,8 @@ import 'regenerator-runtime/runtime'
 class App extends React.Component {
   state = {
     step: 0,
-    now: 0
+    now: 0,
+    progressBarHeight: '0'
   }
 
   calcNow = (step) => {
@@ -17,10 +18,6 @@ class App extends React.Component {
     } else {
       return this.state.now
     }
-  }
-
-  sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms))
   }
 
   updateStepAndNow = async () => {
@@ -37,8 +34,15 @@ class App extends React.Component {
     }
   }
 
+  setProgressBarHeight = () => {
+    this.setState(() => (
+      { progressBarHeight: `${((window.innerHeight - 85) / 7 - 53) / 10}rem` }
+    ))
+  }
+
   componentDidMount () {
     this.updateStepAndNow()
+    this.setProgressBarHeight()
   }
 
   render () {
@@ -49,36 +53,43 @@ class App extends React.Component {
           label='Stop - 5min'
           now={this.calcNow(0)}
           stepNum={0}
+          progressBarHeight={this.state.progressBarHeight}
         />
         <Step
           label='Increase volume - 2min'
           now={this.calcNow(1)}
           stepNum={1}
+          progressBarHeight={this.state.progressBarHeight}
         />
         <Step
           label='Touch - 2min'
           now={this.calcNow(2)}
           stepNum={2}
+          progressBarHeight={this.state.progressBarHeight}
         />
         <Step
           label='Binky - 2min'
           now={this.calcNow(3)}
           stepNum={3}
+          progressBarHeight={this.state.progressBarHeight}
         />
         <Step
           label='Add rocking - 2min'
           now={this.calcNow(4)}
           stepNum={4}
+          progressBarHeight={this.state.progressBarHeight}
         />
         <Step
           label='Cuddle - 2min'
           now={this.calcNow(5)}
           stepNum={5}
+          progressBarHeight={this.state.progressBarHeight}
         />
         <Step
           label='K, time to feed!'
           now={this.calcNow(6)}
           stepNum={6}
+          progressBarHeight={this.state.progressBarHeight}
         />
       </div>
     )
