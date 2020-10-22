@@ -1,55 +1,64 @@
 import React, { useState, useEffect } from 'react'
 import Step from './Step'
-
-import 'regenerator-runtime/runtime'
+import StepLabel from './StepLabel'
 
 const App = () => {
-  const [progressBarHeight, setProgressBarHeight] = useState('2rem')
+  const [stepHeight, setStepHeight] = useState('2rem')
+  const [currentStep, setCurrentStep] = useState(0)
 
   useEffect(() => {
-    setProgressBarHeight(
-      `${((window.innerHeight - 85) / 7 - 53) / 10}rem`
+    console.log('App useEffect')
+    setStepHeight(
+      `${((window.innerHeight - 140) / 6 - 53) / 10}rem`
     )
-  })
+  }, [])
 
   return (
     <div className='container-fluid'>
       <h1>sitback</h1>
       <Step
         label='Stop - 5min'
-        stepIndex={0}
-        progressBarHeight={progressBarHeight}
+        step={0}
+        stepHeight={stepHeight}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
       />
       <Step
         label='Increase volume - 2min'
-        stepIndex={1}
-        progressBarHeight={progressBarHeight}
+        step={1}
+        stepHeight={stepHeight}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
       />
       <Step
         label='Touch - 2min'
-        stepIndex={2}
-        progressBarHeight={progressBarHeight}
+        step={2}
+        stepHeight={stepHeight}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
       />
       <Step
         label='Binky - 2min'
-        stepIndex={3}
-        progressBarHeight={progressBarHeight}
+        step={3}
+        stepHeight={stepHeight}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
       />
       <Step
         label='Add rocking - 2min'
-        stepIndex={4}
-        progressBarHeight={progressBarHeight}
+        step={4}
+        stepHeight={stepHeight}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
       />
       <Step
         label='Cuddle - 2min'
-        stepIndex={5}
-        progressBarHeight={progressBarHeight}
+        step={5}
+        stepHeight={stepHeight}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
       />
-      <Step
-        label='K, time to feed!'
-        stepIndex={6}
-        progressBarHeight={progressBarHeight}
-      />
+      <StepLabel label='K, time to feed!' />
     </div>
   )
 }
