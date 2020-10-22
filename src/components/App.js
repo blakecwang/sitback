@@ -4,31 +4,19 @@ import Step from './Step'
 import 'regenerator-runtime/runtime'
 
 const App = (props) => {
-  const [step, setStep] = useState(0)
-  const [now, setNow] = useState(0)
   const [progressBarHeight, setProgressBarHeight] = useState('2rem')
+  const [timeIndex, setTimeIndex] = useState(0)
 
-  const calcNow = (step) => {
-    if (step > step) {
-      return 100
-    } else if (step < step) {
-      return 0
-    } else {
-      return now
-    }
-  }
-
-  const updateStepAndNow = async () => {
+  const initTime = async () => {
     const period5 = 5 * 60 * 1000 / 100
     const period2 = 2 * 60 * 1000 / 100
 
     for (let i = 0; i < 699; i++) {
+      console.log(`loop ${i}`)
       const period = i < 99 ? period5 : period2
-      const step = ~~(i / 100)
-      const now = i % 100
-
       await new Promise(resolve => setTimeout(resolve, period))
-      setState(() => ({ step, now }))
+
+      setTimeIndex(i)
     }
   }
 
@@ -37,9 +25,8 @@ const App = (props) => {
   )
 
   useEffect(() => {
-    const newHeight = calcProgressBarHeight()
-    setProgressBarHeight(newHeight)
-    updateStepAndNow()
+    initTime()
+    setProgressBarHeight(calcProgressBarHeight())
   })
 
   return (
@@ -47,44 +34,44 @@ const App = (props) => {
       <h1>sitback</h1>
       <Step
         label='Stop - 5min'
-        now={calcNow(0)}
-        stepNum={0}
+        timeIndex={timeIndex}
+        stepIndex={0}
         progressBarHeight={progressBarHeight}
       />
       <Step
         label='Increase volume - 2min'
-        now={calcNow(1)}
-        stepNum={1}
+        timeIndex={timeIndex}
+        stepIndex={1}
         progressBarHeight={progressBarHeight}
       />
       <Step
         label='Touch - 2min'
-        now={calcNow(2)}
-        stepNum={2}
+        timeIndex={timeIndex}
+        stepIndex={2}
         progressBarHeight={progressBarHeight}
       />
       <Step
         label='Binky - 2min'
-        now={calcNow(3)}
-        stepNum={3}
+        timeIndex={timeIndex}
+        stepIndex={3}
         progressBarHeight={progressBarHeight}
       />
       <Step
         label='Add rocking - 2min'
-        now={calcNow(4)}
-        stepNum={4}
+        timeIndex={timeIndex}
+        stepIndex={4}
         progressBarHeight={progressBarHeight}
       />
       <Step
         label='Cuddle - 2min'
-        now={calcNow(5)}
-        stepNum={5}
+        timeIndex={timeIndex}
+        stepIndex={5}
         progressBarHeight={progressBarHeight}
       />
       <Step
         label='K, time to feed!'
-        now={calcNow(6)}
-        stepNum={6}
+        timeIndex={timeIndex}
+        stepIndex={6}
         progressBarHeight={progressBarHeight}
       />
     </div>
