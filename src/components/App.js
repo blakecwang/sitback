@@ -5,6 +5,14 @@ import StepLabel from './StepLabel'
 const App = () => {
   const [stepHeight, setStepHeight] = useState('2rem')
   const [currentStep, setCurrentStep] = useState(0)
+  const [childRenderer, setChildRenderer] = useState(true)
+
+  const triggerRender = () => {
+    setChildRenderer((val) => {
+      console.log(`trigger ${val}`)
+      return !val
+    })
+  }
 
   useEffect(() => {
     console.log('App useEffect')
@@ -22,6 +30,7 @@ const App = () => {
         stepHeight={stepHeight}
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
+        triggerRender={triggerRender}
       />
       <Step
         label='Increase volume - 2min'
@@ -29,6 +38,7 @@ const App = () => {
         stepHeight={stepHeight}
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
+        triggerRender={triggerRender}
       />
       <Step
         label='Touch - 2min'
@@ -36,6 +46,7 @@ const App = () => {
         stepHeight={stepHeight}
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
+        triggerRender={triggerRender}
       />
       <Step
         label='Binky - 2min'
@@ -43,6 +54,7 @@ const App = () => {
         stepHeight={stepHeight}
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
+        triggerRender={triggerRender}
       />
       <Step
         label='Add rocking - 2min'
@@ -50,6 +62,7 @@ const App = () => {
         stepHeight={stepHeight}
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
+        triggerRender={triggerRender}
       />
       <Step
         label='Cuddle - 2min'
@@ -57,6 +70,7 @@ const App = () => {
         stepHeight={stepHeight}
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
+        triggerRender={triggerRender}
       />
       <StepLabel label='K, time to feed!' />
     </div>
